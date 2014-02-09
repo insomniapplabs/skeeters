@@ -1,0 +1,72 @@
+<%= render 'partials/dashboard_nav' %>
+<div class="page-container">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-2">
+        <%= render 'partials/dashboard_sidebar' %>
+      </div>
+      <div class="col-md-10">
+        <h1 class="secondary-title">Calendar</h1>
+        <div class="row">
+          <div class="col-md-8">
+            <h2 class="dash-updates">Upcoming Events</h2>
+            <table class="table table-bordered">
+              <tr class="gray">
+                <td class="col-md-6">
+                  <h4 class="table-header">Date and Time</h4>
+                </td>
+                <td class="col-md-6">
+                  <h4 class="table-header">Event Information</h4>
+                </td>
+              </tr>
+            </table>
+            <% if @events.present? %>
+            <table class="table table-hover">
+            <% for event in @events %>
+              <tr>
+                <td class="col-md-2">
+                  <% if event.event_type == "game" %>
+                  <p class="type-game"><%= event.event_type.capitalize %></p>
+                  <% elsif event.event_type == "practice" %>
+                  <p class="type-practice"><%= event.event_type.capitalize %></p>
+                  <% end %>
+                </td>
+                <td class="col-md-4">
+                  <strong><%= event.date.strftime("%a, %b %-d") %></strong><br>
+                  <%= event.start_time %> CST
+                </td>
+                <td class="col-md-6">
+                  <% if event.event_type == "game" && event.home_away == "home" %>
+                  <strong>vs <%= event.opponent %></strong><br>
+                  <% elsif event.event_type == "game" && event.home_away == "away" %>
+                  <strong>@ <%= event.opponent %></strong><br>
+                  <% end %>
+                  at <%= event.location %>
+                </td>
+              </tr>
+              <% end %>
+            </table>
+            <% else %>
+            <h4 class="empty">There are currently no events scheduled.</h4>
+            <% end %>
+          </div>
+          <div class="col-md-4">
+            <% if current_member.admin? == false %>
+            <%= render 'partials/sponsor_sidebar' %>
+            <% elsif current_member.admin? == true %>
+            <div id="add-event-container">
+              <h2 class="dash-updates">Add Event</h2>
+              <ul class="add-event">
+                <li><span class="btn-alt-btm btn-primary" id="add-game-btn">Add Game</span></li>
+                <li><span class="btn-alt-btm btn-primary" id="add-practice-btn">Add Practice</span></li>
+              </ul>
+            </div>
+            <%= render 'partials/add_practice' %>  
+            <%= render 'partials/add_game' %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

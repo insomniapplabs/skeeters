@@ -1,0 +1,98 @@
+<%= render 'partials/dashboard_nav' %>
+<div class="page-container">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-2">
+        <%= render 'partials/dashboard_sidebar' %>
+      </div>
+      <div class="col-md-10">
+        <% if current_member.admin? %>
+        <div class="secondary-title-container">
+          <div class="row">
+            <div class="col-md-12">
+              <h1 class="secondary-title-alt">
+                Dashboard
+              </h1> 
+              <p class="btn-alt btn-primary" id="add-post-btn">Add New Post</p>
+            </div>
+          </div>
+        </div>
+        <% else %>
+        <h1 class="secondary-title">Dashboard</h1>
+        <% end %>
+
+        <div class="row">
+          <div class="col-md-7">
+            <% if current_member.admin? %>
+
+            
+
+            <div class="add-post-container">
+              <h2 class="dash-updates">Add Post</h2>
+              <%= form_for @post, html: {id: "new_post-f"} do |f| %>
+              <div class="form-group">
+                <label class="sr-only">Title</label>
+                <%= f.text_field :title, placeholder: "Enter Title", class: "form-control", autofocus: :true, autocomplete: "off" %>
+                </div>
+                <div class="form-group">
+                  <label class="sr-only">Publish On</label>
+                  <%= f.text_field :publish_on, class: "form-control", id: "datepicker", placeholder: "Select a publish date" %>
+                </div>
+                <div class="form-group">
+                  <label class="sr-only">Posted By</label>
+                  <%= f.collection_select :member_id, Member.all, :id, :first_name, {prompt: "Select an author"}, {class: "form-control"} %>
+                </div>
+                <div class="checkbox">
+                  <label>
+                  <%= f.check_box :private %> <strong>Check to make post private to members.</strong>
+                  </label>
+                </div>
+                <div class="form-group">
+                  <label class="sr-only">Message</label>
+                  <%= f.text_area :body, placeholder: "Enter message...", class: "form-control", rows: 10 %>
+                </div>
+                <div>
+                  <%= f.submit "Add Post", class: "btn-alt btn-primary" %>
+                  <p class="cancel-btm" id="cancel-post-btn">Cancel</p>
+                </div>
+              <% end %>
+            </div>
+          <% end %>
+          <div class="recent-updates">
+            <h2 class="dash-updates">Recent Updates</h2>
+            <% for post in @posts %>
+            <div class="post-container">
+              <h3 class="dash-post-title"><%= post.title %></h3>
+              <p class="dash-post-detail">Posted by <%= "#{post.member.first_name} #{post.member.last_name}" %> on <%= post.publish_on.strftime('%B %-d') %></p>
+              <div class="text-container">
+                <%= markdown(post.body)  %>
+              </div>
+            </div>
+            <% end %>
+          </div>
+        </div>
+        <div class="col-md-5">
+          <h2 class="dash-updates">Upcoming Events</h2>
+          <% for event in @upcoming_events %>
+            <% if event.event_type == "game" && event.game_type == "Scrimmage" %>
+            <div class="dash-event">
+              <p class="lato-event">Scrimmage against <%= event.opponent %>.</p>
+              <p class="lato-event-detail"><%= event.date.strftime('%B %-d') %> @ <%= event.start_time %></p>
+            </div>
+            <% elsif event.event_type == "game" && event.game_type == "Tournament" %>
+            <div class="dash-event">
+              <p class="lato-event">Tournament Game against <%= event.opponent %>.</p>
+              <p class="lato-event-detail"><%= event.date.strftime('%B %-d') %> @ <%= event.start_time %></p>
+            </div>
+            <% elsif event.event_type == "practice" %>
+            <div class="dash-event">
+              <p class="lato-event">Practice at <%= event.location %>.</p>
+              <p class="lato-event-detail"><%= event.date.strftime('%B %-d') %> @ <%= event.start_time %></p>
+            </div>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

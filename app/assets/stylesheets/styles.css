@@ -1,0 +1,129 @@
+html, body { height:100%; }
+body { position:relative;overflow:hidden; }
+
+
+
+#main-container {  }
+
+.home-title { font-family: 'sonsie_oneregular';margin-top:0;font-size:2.9em; }
+.skeeter-image-container { padding:0 25 px 50px 0; }
+.skeeter-img { width:100%; }
+.home-top { margin-top:50px; }
+.sponsor-heading { }
+.menu-text { margin-top:10px;margin-bottom:10px;margin-left:15px;margin-right:15px; }
+#menu-button { position:absolute;top:10px;left:0;display:inline-block;background-color:#555;color:white;border-top-right-radius:5px;border-bottom-right-radius:5px;cursor:pointer; }
+.sonsie-md { text-shadow:0px 1px 1px #777;margin-top:150px;color:#00178C;font-family: 'sonsie_oneregular';font-size:4.0em;text-align:center; }
+
+.block-container { margin-top:120px; }
+
+.main-menu { list-style:none;padding-left:0;display:inline-block;float:right;padding-top:20px; }
+.main-menu li { display:inline;margin-left:40px;font-family: 'latoblack';font-size:1.35em; }
+.menu-icon { list-style:none;padding-left:0;display:inline-block;float:right;padding-top:20px;padding-top:20px; }
+.menu-icon li { display:inline;margin-left:40px;margin-right:20px;font-family: 'latoblack';font-size:1.35em; }
+
+.top-nav { overflow:hidden; }
+
+.home-main-text { text-align:center;font-size:7.0em; }
+
+h2.sponsors { font-family: 'latobold';text-align:center;font-size:3.0em;margin-top:0; }
+
+h1.hard { font-family: 'latoregular';font-size:4.0em;line-height:1.1;margin-top:0px;color:#333;text-align:center; }
+
+.nav-container { background:#111; }
+
+h2.thanks { font-family: 'latohairline';color:#aaa;margin-bottom:20px; }
+
+img.sponsor-img { width:100%;border:1px double #ddd; }
+
+.sponsor-container { background:#222;padding:20px 0px 140px 0;border-top:2px solid #888; }
+
+.home-login { width:300px;padding:20px; }
+
+.forgot-pw-link { margin-top:10px; }
+
+.bug-img { margin-top:30px;margin-bottom:30px; }
+
+.btn-space { margin-right:4px; }
+
+.btn-container { padding:20px 0 30px 0;}
+
+.top-container { padding:20px 0;}
+
+.dashboard-nav { 
+	position:fixed;
+	overflow:hidden;
+	top:0;
+	left:0;
+	height:100%;
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	background:#f7f7f7;
+}
+
+a.dash-nav {
+	display:block;
+	font-size:2.0em;
+	height:2.5em;
+	width:2.5em;
+	line-height:2.5em;
+	text-align:center;
+	color:#999;
+	position:relative;
+	border-bottom: 1px solid rgba(0,0,0,0.05);
+	-webkit-transition: background 0.1s ease-in-out;
+	-moz-transition: background 0.1s ease-in-out;
+	transition: background 0.1s ease-in-out;
+}
+
+.page-container { margin:0 20px; }
+
+.secondary-title { font-family: 'latolight';border-bottom:1px solid #eee; }
+
+.secondary-title-alt { font-family: 'latolight';display:inline-block;margin-bottom:0px; }
+.secondary-title-container { border-bottom:1px solid #eee;}
+#add-post-btn	{ float:right;display:inline-block;margin-top:18px; }
+#add-member-btn	{ float:right;display:inline-block;margin-top:18px; }
+
+
+
+.member-nav { padding-top:20px; }
+
+.dash-updates { font-family: 'latobold';color:#bbb;margin-top:20px; }
+
+.post-container { border-bottom:1px solid #ddd;padding-bottom:30px;margin-bottom:20px;}
+
+.dash-post-title { font-family: 'latolight';font-size:2.5em;color:#D8212F;margin-bottom:1px; }
+.dash-post-detail { font-family: 'latoregular';font-size:1.1em;color:#bbb;margin-top:0;font-style:italic; }
+.text-container p { font-family: 'latolight';font-size:1.3em;font-color:#111; }
+
+.add-event { padding-left:0;list-style-type:none; }
+.add-event li { }
+
+.cancel-btm { cursor:pointer;color:#428bca;float:right;padding-top:10px; }
+
+h4.table-header { margin:0;color:black;font-family: 'latobold'; }
+.type-game { background:#777777;display:inline;color:#fff;padding:4px 6px;border-radius:1px; }
+.type-practice { background:#ddd;display:inline;color:#111;padding:4px 6px;border-radius:1px; }
+
+.sponsor-sidebar-img { border:4px double #ddd;margin-bottom:10px;}
+
+.bold { font-family: 'latobold'; }
+
+.lato-event { font-family: 'latolight';font-size:1.2em;margin-bottom:0; }
+.lato-event-detail { font-family: 'latobold';font-size:1.0em; }
+.dash-event { border-bottom:1px solid #eee;margin-bottom:5px; }
+
+.invite-members-container { padding:20px 20px 20px 0;margin-right:50%; }
+
+.sign-in-container { width:350px;margin-top:0;margin-left:auto;margin-right:auto;}
+.signin-img { margin-top:100px; }
+.remember { margin-bottom:7px;margin-left:2px;}
+.forgot { margin-bottom:10px;}
+
+.set-password { font-family: 'latolight';text-align:center;margin-bottom:15px;margin-top:0; }
+.set-password-container { margin-top:0px;margin-left:auto;margin-right:auto;width:250px;}
+.create-password-img { }
+
+
+

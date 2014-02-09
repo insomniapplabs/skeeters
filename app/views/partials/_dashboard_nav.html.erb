@@ -1,0 +1,42 @@
+<nav class="navbar navbar-clear" role="navigation">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="/">Skeeters Baseball</a>
+  </div>
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <ul class="nav navbar-nav">
+      <li>
+        <%= link_to dashboard_path, data: { toggle: "tooltip", placement: "bottom"}, title: "Dashboard", id: "dashboard-tooltip" do %>
+          <span class="glyphicon glyphicon-dashboard"></span>
+        <% end %>
+      </li>
+      <li>
+        <%= link_to calendar_path, data: { toggle: "tooltip", placement: "bottom"}, title: "Calendar", id: "calendar-tooltip" do %>
+          <span class="glyphicon glyphicon-calendar"></span>
+        <% end %>
+      </li>
+      <li>
+        <%= link_to roster_path, data: { toggle: "tooltip", placement: "bottom"}, title: "Roster", id: "roster-tooltip" do %>
+          <span class="glyphicon glyphicon-user"></span>
+        <% end %>
+      </li>
+      <li>
+        <%= link_to media_path, data: { toggle: "tooltip", placement: "bottom"}, title: "Media", id: "media-tooltip" do %>
+          <span class="glyphicon glyphicon-picture"></span>
+        <% end %>
+      </li>
+      <% if current_member.admin? %>
+      <li>  
+        <%= link_to members_path, data: { toggle: "tooltip", placement: "bottom"}, title: "View Members", id: "members-tooltip" do %>
+          <span class="glyphicon glyphicon-list-alt"></span>
+        <% end %>
+      </li>
+      <% end %>
+    </ul>
+  </div>
+</nav>

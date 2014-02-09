@@ -1,0 +1,37 @@
+<div class="member-nav">
+  <ul class="nav">
+    <li>
+      <%= link_to dashboard_path do %>
+        <span class="glyphicon glyphicon-dashboard"></span> Dashboard
+      <% end %>
+    </li>
+    <li>
+      <%= link_to calendar_path do %>
+        <span class="glyphicon glyphicon-calendar"></span> Calendar
+      <% end %>
+    </li>
+    <li>
+      <%= link_to roster_path do %>
+        <span class="glyphicon glyphicon-user"></span> Roster
+      <% end %>
+    </li>
+    <li>
+      <%= link_to media_path do %>
+        <span class="glyphicon glyphicon-picture"></span> Media
+      <% end %>
+    </li>
+    
+    <% if current_member.admin? %>
+    <li>
+      <%= link_to members_path do %>
+        <span class="glyphicon glyphicon-list-alt"></span> View Members
+      <% end %>
+    </li>
+    <% end %>
+    <li>
+      <%= link_to new_member_registration_path do %>
+        New Member Sign Up
+      <% end %>
+    </li>
+  </ul>
+</div>

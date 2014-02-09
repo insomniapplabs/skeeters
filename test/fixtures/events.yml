@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  date: 2014-02-04
+  start_time: MyString
+  arrival: MyString
+  opponent: MyString
+  home_away: MyString
+  game_type: MyString
+  location: MyString
+  notes: MyText
+  event_type: MyString
+  team_id: 1
+
+two:
+  date: 2014-02-04
+  start_time: MyString
+  arrival: MyString
+  opponent: MyString
+  home_away: MyString
+  game_type: MyString
+  location: MyString
+  notes: MyText
+  event_type: MyString
+  team_id: 1

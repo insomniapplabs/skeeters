@@ -1,0 +1,89 @@
+<%= render 'partials/dashboard_nav' %>
+<div class="page-container">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-2">
+        <%= render 'partials/dashboard_sidebar' %>
+      </div>
+      <div class="col-md-10">
+        <div class="secondary-title-container">
+          <div class="row">
+            <div class="col-md-12">
+              <h1 class="secondary-title-alt">
+                Members List
+              </h1>
+              <p class="btn-alt btn-primary" id="add-member-btn">Invite Members</p>
+            </div>
+          </div>
+        </div>
+
+
+
+
+        <div class="row">
+        	<div class="col-md-12">
+            <div class="invite-members-container">
+              
+             
+
+
+
+              <%= form_for resource, :as => resource_name, :url => invitation_path(resource_name), :html => {:method => :post } do |f| %>
+              <%= devise_error_messages! %>
+
+              <% resource.class.invite_key_fields.each do |field| -%>
+              <div class="form-group">
+                <label class="sr-only"><%= f.label field %></label>
+                <%= f.text_field field, placeholder: "Enter email address", class: "form-control" %></p>
+              <% end -%>
+              </div>
+              
+              <%= f.submit t("devise.invitations.new.submit_button"), class: "btn-alt btn-primary" %>
+              
+
+            <% end %>
+
+
+
+
+
+
+
+
+            </div>
+           
+        		<table class="table">
+        			<thead>
+       				 	<tr>
+          				<th>First Name</th>
+          				<th>Last Name</th>
+          				<th>Email</th>
+          				<th>&nbsp;</th>
+          				<th>&nbsp;</th>
+        				</tr>
+      				</thead>
+      				<tbody>
+      					<% for member in @members_list %>
+      					<tr>
+      						<td><%= member.first_name %></td>
+      						<td><%= member.last_name %></td>
+      						<td><%= member.email %></td>
+      						<% if member.admin? %>
+                   
+                  <td><%= submit_tag "Remove Admin", class: "btn-alt-m btn-sm-alt btn-warning" %></td>
+      						 
+      						<% else %>
+      						<td><p class="btn-alt-m btn-sm-alt btn-success">Make Admin</p></td>
+      						<% end %>
+      						<td><%= link_to "Delete Member", @member, method: :delete, confirm: "Are you sure you want to delete this member?", class: "btn-alt-m btn-sm-alt btn-danger" %></td>
+      					</tr>
+      					<% end %>
+      				</tbody>
+        		</table>
+           
+        	</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

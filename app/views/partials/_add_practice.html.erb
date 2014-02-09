@@ -1,0 +1,38 @@
+<div id="add-practice-container">
+<h2 class="dash-updates">Add Practice</h2>
+<div class="add-practice-form">
+  <%= form_for @event, html: {id: "new-practice-f"} do |f| %>
+  <%= f.hidden_field :event_type, value: "practice" %>
+  <div class="form-group">
+    <label class="sr-only">Date</label>
+    <%= f.text_field :date, placeholder: "Add date", class: "form-control", id: "datepicker-p" %>
+  </div>
+  <div class="form-group">
+    <label class="sr-only">Start</label>
+    <%= f.text_field :start_time, placeholder: "Start time", class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <label class="sr-only">Arrive</label>
+    <div class="row">
+      <div class="col-md-3">
+        <%= f.text_field :arrival, class: "form-control", placeholder: "15" %>
+      </div>
+      <div class="col-md-9">
+        minutes before (Optional)
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="sr-only">Location</label>
+    <%= f.text_field :location, placeholder: "Add a location", class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <label class="sr-only">Notes</label>
+    <%= f.text_area :notes, placeholder: "Add a note...", class: "form-control" %>
+  </div>
+
+  <%= f.submit "Save Practice", name: "save-and-close", class: "btn-alt btn-primary" %>
+  <p class="cancel-btm" id="cancel-practice-btn-btm">Cancel</p>
+  <% end %>
+</div>
+</div>
