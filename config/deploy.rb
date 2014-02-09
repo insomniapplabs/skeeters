@@ -10,7 +10,7 @@ set :deploy_via, :remote_cache
 set :use_sudo, false
 
 set :scm, "git"
-set :repository,  "https://github.com/insomniapplabs/#{application}.git"
+set :repository, "https://github.com/insomniapplabs/#{application}.git"
 set :branch, "master"
 set :normalize_asset_timestamps, false
 
