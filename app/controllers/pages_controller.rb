@@ -18,6 +18,8 @@ class PagesController < ApplicationController
   end
 
   def roster
+    @profile = Profile.new
+    @profiles = Profile.order('player_number asc')
 
   end
 

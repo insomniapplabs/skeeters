@@ -83,6 +83,7 @@ a.dash-nav {
 .secondary-title-alt { font-family: 'latolight';display:inline-block;margin-bottom:0px; }
 .secondary-title-container { border-bottom:1px solid #eee;}
 #add-post-btn	{ float:right;display:inline-block;margin-top:18px; }
+#add-profile-btn { float:right;display:inline-block;margin-top:18px; }
 #add-member-btn	{ float:right;display:inline-block;margin-top:18px; }
 
 
@@ -126,4 +127,16 @@ h4.table-header { margin:0;color:black;font-family: 'latobold'; }
 .create-password-img { }
 
 .forgot-password-container { margin-top:50px;margin-left:auto;margin-right:auto;width:350px; }
+
+.add-profile-container { margin-right:50%;border-bottom:1px solid #ddd;padding-bottom:20px; 	}
+
+.img-bottom { margin-bottom:20px;}
+
+
+
+
+
+
+
+
 

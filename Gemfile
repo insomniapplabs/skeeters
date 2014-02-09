@@ -39,7 +39,7 @@ end
 # gem 'unicorn'
 
 # Use Capistrano for deployment
-# gem 'capistrano', group: :development
+gem 'capistrano', group: :development
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
@@ -49,3 +49,6 @@ gem 'devise_invitable'
 gem 'jquery-turbolinks'
 gem 'bootstrap-datepicker-rails'
 gem 'redcarpet'
+gem 'carrierwave'
+gem 'rmagick'
+gem 'friendly_id', '~> 5.0.0'

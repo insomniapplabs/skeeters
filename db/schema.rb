@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140206191339) do
+ActiveRecord::Schema.define(version: 20140209072618) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -69,6 +69,24 @@ ActiveRecord::Schema.define(version: 20140206191339) do
     t.boolean  "private"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "profiles", force: true do |t|
+    t.string   "player_first_name"
+    t.string   "player_last_name"
+    t.string   "player_number"
+    t.string   "player_favorite_team"
+    t.string   "player_favorite_player"
+    t.string   "player_favorite_subject"
+    t.string   "player_career"
+    t.string   "player_favorite_song"
+    t.string   "player_favorite_book"
+    t.string   "player_favorite_movie"
+    t.string   "player_favorite_food"
+    t.string   "player_nickname"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "image"
   end
 
   create_table "teams", force: true do |t|

@@ -1,5 +1,7 @@
 Skeetersweb::Application.routes.draw do
   
+  resources :profiles
+
   resources :posts
 
   get 'dashboard' => 'pages#dashboard', as: "dashboard"

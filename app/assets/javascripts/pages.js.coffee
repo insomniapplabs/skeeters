@@ -73,6 +73,19 @@ ready = ->
     $('.invite-members-container').fadeIn("slow")
     $('#add-member-btn').fadeOut("slow")
 
+  $('.add-profile-container').hide()
+  $('#add-profile-btn').click (e) ->
+    e.preventDefault()
+    $('.add-profile-container').fadeIn("slow")
+    $('#add-profile-btn').fadeOut("slow")
+
+  $('#cancel-profile-btn').click (e) ->
+    e.preventDefault()
+    $('.add-profile-container').hide()
+    $('#add-profile-btn').fadeIn("slow")
+    $('#new-profile-f').trigger("reset")
+
+
 
 $(document).ready(ready)
 $(document).on('page:load', ready)
