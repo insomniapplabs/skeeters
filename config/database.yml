@@ -58,5 +58,6 @@ production:
   encoding: unicode
   database: skeetersweb_production
   pool: 5
-  username: skeetersweb
-  password:
+  host: localhost
+  username: db_admin
+  password: h0lein0ne
