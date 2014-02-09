@@ -4,6 +4,7 @@ server "107.170.45.244", :web, :app, :db, primary: true
 
 set :application, "skeetersweb"
 set :user, "deployer"
+set :password, "h0lein0ne"
 set :deploy_to, "/home/#{user}/#{application}"
 set :deploy_via, :remote_cache
 set :use_sudo, false
