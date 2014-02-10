@@ -149,7 +149,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootstrap-datepicker-rails
-  capistrano (~> 2.15.5)
+  capistrano (~> 2.8)
   carrierwave
   coffee-rails (~> 4.0.0)
   devise
