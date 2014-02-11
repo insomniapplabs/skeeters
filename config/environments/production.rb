@@ -83,11 +83,11 @@ Skeetersweb::Application.configure do
   config.action_mailer.smtp_settings = {
     address: "smtp.gmail.com",
     port: 587,
-    domain: "skeetersbaseballclub.org",
+    domain: "localhost",
     authentication: "plain",
     enable_starttls_auto: true,
     user_name: "aaronjohnsonis", # you can use ordinary gmail username here
-    password: "H0lein0ne",   # you can use your gmail password here, but don't push the changes
-    enable_starttls_auto: true
+    password: "H0lein0ne"   # you can use your gmail password here, but don't push the changes
+
   }
 end
