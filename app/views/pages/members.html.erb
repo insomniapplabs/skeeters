@@ -75,7 +75,7 @@
       						<% else %>
       						<td><p class="btn-alt-m btn-sm-alt btn-success">Make Admin</p></td>
       						<% end %>
-      						<td><%= link_to "Delete Member", , registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete, class: "btn-alt-m btn-sm-alt btn-danger" %></td>
+      						<td><%= link_to "Delete Member", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete, class: "btn-alt-m btn-sm-alt btn-danger" %></td>
       					</tr>
       					<% end %>
       				</tbody>
