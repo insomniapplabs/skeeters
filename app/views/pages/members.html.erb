@@ -58,8 +58,8 @@
           				<th>First Name</th>
           				<th>Last Name</th>
           				<th>Email</th>
-          				<th>&nbsp;</th>
-          				<th>&nbsp;</th>
+          				
+          				
         				</tr>
       				</thead>
       				<tbody>
@@ -68,14 +68,7 @@
       						<td><%= member.first_name %></td>
       						<td><%= member.last_name %></td>
       						<td><%= member.email %></td>
-      						<% if member.admin? %>
-                   
-                  <td><%= submit_tag "Remove Admin", class: "btn-alt-m btn-sm-alt btn-warning" %></td>
-      						 
-      						<% else %>
-      						<td><p class="btn-alt-m btn-sm-alt btn-success">Make Admin</p></td>
-      						<% end %>
-      						<td><%= link_to "Delete Member", registration_path(resource_name), confirm: "Are you sure?", method: :delete, class: "btn-alt-m btn-sm-alt btn-danger" %></td>
+      						
       					</tr>
       					<% end %>
       				</tbody>
