@@ -88,6 +88,6 @@ Skeetersweb::Application.configure do
     enable_starttls_auto: true,
     user_name: "aaronjohnsonis", # you can use ordinary gmail username here
     password: "H0lein0ne"   # you can use your gmail password here, but don't push the changes
-    :enable_starttls_auto: true
+    enable_starttls_auto: true
   }
 end
