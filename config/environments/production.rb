@@ -87,7 +87,7 @@ Skeetersweb::Application.configure do
     authentication: "plain",
     enable_starttls_auto: true,
     user_name: "aaronjohnsonis", # you can use ordinary gmail username here
-    password: "H0lein0ne"   # you can use your gmail password here, but don't push the changes
+    password: "H0lein0ne",   # you can use your gmail password here, but don't push the changes
     enable_starttls_auto: true
   }
 end
