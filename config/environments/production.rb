@@ -80,6 +80,8 @@ Skeetersweb::Application.configure do
 
   config.action_mailer.default_url_options = { host: "107.170.45.244" }
 
+  config.action_mailer.delivery_method = :sendmail
+
   config.action_mailer.smtp_settings = {
     address: "smtp.gmail.com",
     port: 587,
