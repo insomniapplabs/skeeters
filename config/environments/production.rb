@@ -80,7 +80,6 @@ Skeetersweb::Application.configure do
 
   config.action_mailer.default_url_options = { host: "107.170.45.244" }
 
-  config.action_mailer.delivery_method = :smtp
 
   config.action_mailer.smtp_settings = {
     address: "smtp.gmail.com",
@@ -89,7 +88,7 @@ Skeetersweb::Application.configure do
     authentication: "plain",
     enable_starttls_auto: true,
     user_name: "aaronjohnsonis", # you can use ordinary gmail username here
-    password: "H0leIn0ne"   # you can use your gmail password here, but don't push the changes
+    password: "H0leIn)ne"   # you can use your gmail password here, but don't push the changes
 
   }
 end
