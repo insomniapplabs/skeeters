@@ -10,7 +10,6 @@ Skeetersweb::Application.routes.draw do
   get 'media' => 'pages#media', as: "media"
   get 'members' => 'pages#members', as: "members"
 
-  put 'remove_admin' => 'members#remove_admin', as: "remove_admin", via: :put
   resources :events
   resources :teams
 
