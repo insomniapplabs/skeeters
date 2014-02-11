@@ -36,9 +36,12 @@
           <span class="glyphicon glyphicon-list-alt"></span>
         <% end %>
       </li>
-      <li>
-        <%= link_to "Skeeters Store", "http://www.mathewsteamsports.com/" %>
+      <li>  
+        <%= link_to "http://www.mathewsteamsports.com/", data: { toggle: "tooltip", placement: "bottom"}, title: "Skeeters Store", id: "skeeters-tooltip" do %>
+          <span class="glyphicon glyphicon-shopping-cart"></span>
+        <% end %>
       </li>
+      
       <% end %>
     </ul>
   </div>

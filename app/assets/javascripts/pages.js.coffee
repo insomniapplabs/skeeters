@@ -10,6 +10,7 @@ ready = ->
   $('#roster-tooltip').tooltip()
   $('#media-tooltip').tooltip()
   $('#members-tooltip').tooltip()
+  $('#skeeters-tooltip').tooltip()
 
   #$('.add-post-container').hide()
 
