@@ -42,6 +42,7 @@
                   <%= event.start_time %> CST
                   <% end %>
                 </td>
+                <% if current_member.admin? %>
                 <td class="col-md-4">
                   <% if event.event_type == "tournament" %>
                     <strong><%= event.tournament_name %></strong><br>
@@ -58,6 +59,21 @@
                 <td class="col-md-2">
                   <%= link_to "Delete", event, method: :delete, confirm: "Are you sure?", class: "delete-event" %>
                 </td>
+                <% else %>
+                <td class="col-md-6">
+                  <% if event.event_type == "tournament" %>
+                    <strong><%= event.tournament_name %></strong><br>
+                    Location: <%= event.location %>
+                  <% else %>
+                    <% if event.event_type == "game" && event.home_away == "home" %>
+                    <strong>vs <%= event.opponent %></strong><br>
+                    <% elsif event.event_type == "game" && event.home_away == "away" %>
+                    <strong>@ <%= event.opponent %></strong><br>
+                    <% end %>
+                    at <%= event.location %>
+                  <% end %>
+                </td>
+                <% end %>
               </tr>
               <% end %>
             </table>
