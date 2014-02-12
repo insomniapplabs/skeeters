@@ -7,6 +7,10 @@
         <label class="sr-only">Tournament Name</label>
         <%= f.text_field :tournament_name, placeholder: "Tournament Name", class: "form-control" %>
       </div>
+      <div class="form-group">
+        <label class="sr-only">Set Date for Order</label>
+        <%= f.text_field :date, placeholder: "Enter date for ordering purposes", class: "form-control", id: "date-picker-setdate" %>
+      </div>
 			<div class="form-group">
 				<label class="sr-only">Tournament Start Date</label>
 				<%= f.text_field :tournament_start_date, placeholder: "Tournament Start Date", class: "form-control", id: "datepicker-t-start" %>

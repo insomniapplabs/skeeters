@@ -36,6 +36,12 @@ ready = ->
     format: "yyyy-mm-dd"
     todayHighlight: true
     todayBtn: 'linked'
+    autoclose: true
+
+  $('#date-picker-setdate').datepicker
+    format: "yyyy-mm-dd"
+    todayHighlight: true
+    todayBtn: 'linked'
     autoclose: true  
 
   $('#add-practice-container').hide()
