@@ -1,5 +1,5 @@
 html, body { height:100%; }
-body { position:relative;overflow:hidden; }
+body { position:relative; }
 
 
 
@@ -132,14 +132,16 @@ h4.table-header { margin:0;color:black;font-family: 'latobold'; }
 .add-profile-container { margin-right:50%;border-bottom:1px solid #ddd;padding-bottom:20px; 	}
 
 .img-bottom { margin-bottom:5px;}
+.current-profile-img { margin-bottom:15px;}
 
 .delete-event { float:right;margin-right:20px; }
 
 .profile-fname { font-family: 'latoregular';text-align:center;margin:0;font-size:1.2em;line-height:1.1; }
 .profile-lname { font-family: 'latobold';text-align:center;margin:0;font-size:1.5em;line-height:1.1; }
 .profile-number { font-family: 'latoregular';text-align:center;margin:0;font-size:1.3em;line-height:1.1; }
+.profile-edit { font-family: 'latoregular';text-align:center;font-size:0.85em; }
 
-
+.edit-profile-container { width:600px;margin-left:auto;margin-right:auto;margin-top:20px;border:2px solid #ddd;border-radius:2px;padding:0 30px 30px 30px;}
 
 
 

@@ -102,6 +102,17 @@
                 <p class="profile-fname"><%= profile.player_first_name %></p>
                 <p class="profile-lname"><%= profile.player_last_name %></p>
                 <p class="profile-number">#<%= profile.player_number %></p>
+                <% if current_member.admin? %>
+                <p class="profile-edit">
+                  <%= link_to edit_profile_path(profile) do %>
+                    <span class="glyphicon glyphicon-edit"></span> Edit Profile
+                  <% end %>
+                  |
+                  <%= link_to profile, method: :delete, confirm: "Are you sure you want to to delete this profile" do %>
+                    <span class="glyphicon glyphicon-remove"></span> Delete
+                  <% end %>
+                </p>
+                <% end %>
               </div>
             <% end %>
           </div>
