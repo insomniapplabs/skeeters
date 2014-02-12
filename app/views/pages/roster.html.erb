@@ -97,7 +97,12 @@
             <div class="row">
             <% for profile in @profiles %>
 
-              <div class="col-md-2"><%= image_tag profile.image_url.to_s, class: "img-thumbnail img-bottom" %></div>
+              <div class="col-md-2">
+                <%= image_tag profile.image_url.to_s, class: "img-thumbnail img-bottom" %><br>
+                <p class="profile-fname"><%= profile.player_first_name %></p>
+                <p class="profile-lname"><%= profile.player_last_name %></p>
+                <p class="profile-number">#<%= profile.player_number %></p>
+              </div>
             <% end %>
           </div>
           </div>

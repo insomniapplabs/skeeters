@@ -131,9 +131,13 @@ h4.table-header { margin:0;color:black;font-family: 'latobold'; }
 
 .add-profile-container { margin-right:50%;border-bottom:1px solid #ddd;padding-bottom:20px; 	}
 
-.img-bottom { margin-bottom:20px;}
+.img-bottom { margin-bottom:5px;}
 
 .delete-event { float:right;margin-right:20px; }
+
+.profile-fname { font-family: 'latoregular';text-align:center;margin:0;font-size:1.2em;line-height:1.1; }
+.profile-lname { font-family: 'latobold';text-align:center;margin:0;font-size:1.5em;line-height:1.1; }
+.profile-number { font-family: 'latoregular';text-align:center;margin:0;font-size:1.3em;line-height:1.1; }
 
 
 
