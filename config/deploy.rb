@@ -23,7 +23,7 @@ set :default_environment, {
 default_run_options[:pty] = true
 ssh_options[:forward_agent] = true
 
-after "deploy", "deploy:cleanup" #keep only the last 5 releases
+after "deploy", "deploy:symlink_uploads", "deploy:cleanup" #keep only the last 5 releases
 
 
 namespace :deploy do
@@ -34,6 +34,9 @@ namespace :deploy do
         #{rake} RAILS_ENV=#{rails_env.to_s.shellescape} #{asset_env} assets:precompile
       CMD
     end
+  end
+  task :symlink_uploads do
+    run "ln -nfs #{shared_path}/uploads #{release_path}/public/uploads"
   end
   task :start do ; end
   task :stop do ; end
