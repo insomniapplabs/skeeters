@@ -9,12 +9,12 @@ class PagesController < ApplicationController
   def dashboard
   	@post = Post.new
   	@posts = Post.order("publish_on desc").where('publish_on <= ?', Date.today)
-    @upcoming_events = Event.order('date asc').where('date >= ?', Date.today)	
+    @upcoming_events = Event.order('date asc').where('date >= ? OR tournament_start_date >= ?', Date.today, Date.today)	
   end
 
   def calendar
     @event = Event.new
-    @events = Event.order('date asc').where('date >= ?', Time.now)
+    @events = Event.order('date asc').where('date >= ? OR tournament_start_date >= ?', Time.now, Time.now)
   end
 
   def roster

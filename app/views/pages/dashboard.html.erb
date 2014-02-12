@@ -74,7 +74,13 @@
         <div class="col-md-5">
           <h2 class="dash-updates">Upcoming Events</h2>
           <% for event in @upcoming_events %>
-            <% if event.event_type == "game" && event.game_type == "Scrimmage" %>
+
+            <% if event.event_type == "tournament" %>
+            <div class="dash-event">
+              <p class="lato-event"><%= event.tournament_name %> in <%= event.location %></p>
+              <p class="lato-event-detail"><%= event.tournament_start_date.strftime("%a, %b %-d") %> - <%= event.tournament_end_date.strftime("%a, %b %-d") %></p>
+            </div>
+            <% elsif event.event_type == "game" && event.game_type == "Scrimmage" %>
             <div class="dash-event">
               <p class="lato-event">Scrimmage against <%= event.opponent %>.</p>
               <p class="lato-event-detail"><%= event.date.strftime('%B %-d') %> @ <%= event.start_time %></p>

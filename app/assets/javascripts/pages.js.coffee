@@ -20,6 +20,18 @@ ready = ->
     todayBtn: 'linked'
     autoclose: true
 
+  $('#datepicker-t-start').datepicker
+    format: "yyyy-mm-dd"
+    todayHighlight: true
+    todayBtn: 'linked'
+    autoclose: true
+
+  $('#datepicker-t-end').datepicker
+    format: "yyyy-mm-dd"
+    todayHighlight: true
+    todayBtn: 'linked'
+    autoclose: true
+
   $('#datepicker-p').datepicker
     format: "yyyy-mm-dd"
     todayHighlight: true
@@ -28,7 +40,20 @@ ready = ->
 
   $('#add-practice-container').hide()
   $('#add-game-container').hide()
+  $('#add-tournament-container').hide()
 
+
+  $('#add-tournament-btn').click (e) ->
+    e.preventDefault()
+    $('#add-event-container').hide()
+    $('#add-tournament-container').fadeIn("slow")
+
+
+  $('#cancel-tournament-btn-btm').click (e) ->
+    e.preventDefault()
+    $('#add-tournament-container').hide()
+    $('#add-event-container').fadeIn("slow")
+    $('#new-tournament-f').trigger("reset")
 
 
   $('#add-game-btn').click (e) ->

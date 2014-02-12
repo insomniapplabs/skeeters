@@ -29,19 +29,34 @@
                   <p class="type-game"><%= event.event_type.capitalize %></p>
                   <% elsif event.event_type == "practice" %>
                   <p class="type-practice"><%= event.event_type.capitalize %></p>
+                  <% elsif event.event_type == "tournament" %>
+                  <p class="type-tournament"><%= event.event_type.capitalize %></p>
                   <% end %>
                 </td>
                 <td class="col-md-4">
+                  <% if event.event_type == "tournament" %>
+                  <strong><%= event.tournament_start_date.strftime("%a, %b %-d") %> - <%= event.tournament_end_date.strftime("%a, %b %-d") %></strong><br>
+                  Times TBA
+                  <% else %>
                   <strong><%= event.date.strftime("%a, %b %-d") %></strong><br>
                   <%= event.start_time %> CST
-                </td>
-                <td class="col-md-6">
-                  <% if event.event_type == "game" && event.home_away == "home" %>
-                  <strong>vs <%= event.opponent %></strong><br>
-                  <% elsif event.event_type == "game" && event.home_away == "away" %>
-                  <strong>@ <%= event.opponent %></strong><br>
                   <% end %>
-                  at <%= event.location %>
+                </td>
+                <td class="col-md-4">
+                  <% if event.event_type == "tournament" %>
+                    <strong><%= event.tournament_name %></strong><br>
+                    Location: <%= event.location %>
+                  <% else %>
+                    <% if event.event_type == "game" && event.home_away == "home" %>
+                    <strong>vs <%= event.opponent %></strong><br>
+                    <% elsif event.event_type == "game" && event.home_away == "away" %>
+                    <strong>@ <%= event.opponent %></strong><br>
+                    <% end %>
+                    at <%= event.location %>
+                  <% end %>
+                </td>
+                <td class="col-md-2">
+                  <%= link_to "Delete", event, method: :delete, confirm: "Are you sure?", class: "delete-event" %>
                 </td>
               </tr>
               <% end %>
@@ -59,10 +74,12 @@
               <ul class="add-event">
                 <li><span class="btn-alt-btm btn-primary" id="add-game-btn">Add Game</span></li>
                 <li><span class="btn-alt-btm btn-primary" id="add-practice-btn">Add Practice</span></li>
+                <li><span class="btn-alt-btm btn-primary" id="add-tournament-btn">Add Tournament</span></li>
               </ul>
             </div>
             <%= render 'partials/add_practice' %>  
             <%= render 'partials/add_game' %>
+            <%= render 'partials/add_tournament' %>
             <% end %>
           </div>
         </div>

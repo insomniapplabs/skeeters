@@ -106,6 +106,7 @@ a.dash-nav {
 h4.table-header { margin:0;color:black;font-family: 'latobold'; }
 .type-game { background:#777777;display:inline;color:#fff;padding:4px 6px;border-radius:1px; }
 .type-practice { background:#ddd;display:inline;color:#111;padding:4px 6px;border-radius:1px; }
+.type-tournament { background:#1C8DCA;display:inline;color:#fff;padding:4px 6px;border-radius:1px; }
 
 .sponsor-sidebar-img { border:4px double #ddd;margin-bottom:10px;}
 
@@ -132,7 +133,7 @@ h4.table-header { margin:0;color:black;font-family: 'latobold'; }
 
 .img-bottom { margin-bottom:20px;}
 
-
+.delete-event { float:right;margin-right:20px; }
 
 
 
